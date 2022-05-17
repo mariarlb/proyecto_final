@@ -1,0 +1,162 @@
+%
+% Paper title
+% Authors
+% 
+%-----------------------------------------------------------------
+
+\documentclass[12pt,longbibliography]{article}
+
+% Packages
+%-----------------------------------------------------------------
+
+% Allow direct use of accents such as á é ñ.
+\usepackage[utf8]{inputenc}
+
+% This is a good idea to have some symbols included within the font
+% properly:
+% http://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
+\usepackage[T1]{fontenc}
+
+% Set type of paper and margins.
+\usepackage[a4paper, margin=2.7cm]{geometry}
+
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{mathrsfs}           % \mathscr font.
+
+% Generate a PDF with hyperlinks in references.
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,breaklinks]{hyperref}
+
+% Double-stroke font (\mathbbm).
+\usepackage{bbm} 
+
+
+% Bibliography
+%-----------------------------------------------------------------
+
+% This uses a bibliography style which hyperlinks the paper titles to
+% the paper URL specified in the bibtex file. It also uses natbib,
+% which cites papers by name such as Euler (1770) instead of [17].
+
+\usepackage{breakurl}
+\usepackage{natbib}
+\usepackage{url}
+\bibliographystyle{plainnat-linked}
+% \bibliographystyle{plain}
+
+% Shortcuts
+%-----------------------------------------------------------------
+
+% Absolute value 
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+% Inner product
+\newcommand{\ap}[1]{\left\langle#1\right\rangle}
+% Norm
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+% Triple norm
+\newcommand{\tnorm}[1]{\left\vert\!\left\vert\!\left\vert#1\right\vert\!\right\vert\!\right\vert}
+
+% Common double-stroke letters
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\S{\mathbb{S}}
+\def\Z{\mathbb{Z}}
+
+\def\D{\mathcal{D}}
+% \def\L{\mathcal{L}}
+
+\def\grad{\nabla}
+\DeclareMathOperator{\dive}{div}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\essup}{ess\,sup}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\sgn}{sgn}
+
+% Notation for differentials
+\def\d{\,\mathrm{d}}
+\def\dv{\d v}
+\def \ddt{\frac{\mathrm{d}}{\mathrm{d}t}}
+\def \ddt{\frac{\mathrm{d}}{\mathrm{d}t}}
+\def \ddr{\frac{\mathrm{d}}{\mathrm{d}r}}
+
+\def\p{\partial}
+
+\def\ird{\int_{\R^d}}
+\renewcommand{\L}[1]{L^{#1}(\R^d)}
+
+% Theorems
+%-----------------------------------------------------------------
+\newtheorem{thm}{Theorem}[section]
+% \newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prp}[thm]{Proposition}
+% \newtheorem{hyp}[thm]{Hypothesis}
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{prb}{Problem}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{example}
+\newtheorem{ex}[thm]{Example}
+
+
+% Title, author, date
+%-----------------------------------------------------------------
+
+% If set, these will be the internal title and author of the PDF (and
+% will be listed for example in ereaders and tablets).
+
+% \hypersetup{pdftitle={Title of the PDF}}
+% \hypersetup{pdfauthor={Author of the PDF}}
+
+
+% Paper title and author
+\title{Article template}
+\author{Author One \and Author Two}
+
+% Date is set automatically unless specified.
+% \date{October 2015}
+
+
+% Addresses. The "article" class does not have a standard way to
+% include them. This imitates the behaviour of "amsart" by inserting
+% them at the end of the paper.
+%-----------------------------------------------------------------
+
+\AtEndDocument{\bigskip{\footnotesize
+  \noindent
+  \textsc{Author One. Street, A123 456, Country.}
+  \textit{E-mail address}: \texttt{\href{mailto:email@example.com}{email@example.com}}
+  \par
+  \addvspace{\medskipamount}
+  \noindent
+  \textsc{Author Two. Street, A123 456, Country.}
+  \textit{E-mail address}: \texttt{\href{mailto:email@example.com}{email@example.com}}
+}}
+
+
+% =========================================================================
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  We give a nice template for papers.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+\label{sec:intro}
+
+
+
+
+
+\bibliography{bibliography}
+
+
+\end{document}

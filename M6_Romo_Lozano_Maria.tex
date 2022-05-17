@@ -1,162 +1,275 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
 %
-% Paper title
-% Authors
-% 
-%-----------------------------------------------------------------
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[12pt,longbibliography]{article}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-% Packages
-%-----------------------------------------------------------------
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
 
-% Allow direct use of accents such as á é ñ.
-\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % Specify a different language here - english by default
 
-% This is a good idea to have some symbols included within the font
-% properly:
-% http://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
-\usepackage[T1]{fontenc}
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
 
-% Set type of paper and margins.
-\usepackage[a4paper, margin=2.7cm]{geometry}
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
 
-\usepackage{amsmath, amsthm, amsfonts, amssymb}
-\usepackage{mathrsfs}           % \mathscr font.
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
 
-% Generate a PDF with hyperlinks in references.
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,breaklinks]{hyperref}
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
 
-% Double-stroke font (\mathbbm).
-\usepackage{bbm} 
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
 
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
 
-% Bibliography
-%-----------------------------------------------------------------
+\usepackage{hyperref} % Required for hyperlinks
 
-% This uses a bibliography style which hyperlinks the paper titles to
-% the paper URL specified in the bibtex file. It also uses natbib,
-% which cites papers by name such as Euler (1770) instead of [17].
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
 
-\usepackage{breakurl}
-\usepackage{natbib}
-\usepackage{url}
-\bibliographystyle{plainnat-linked}
-% \bibliographystyle{plain}
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
 
-% Shortcuts
-%-----------------------------------------------------------------
-
-% Absolute value 
-\newcommand{\abs}[1]{\left\vert#1\right\vert}
-% Inner product
-\newcommand{\ap}[1]{\left\langle#1\right\rangle}
-% Norm
-\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
-% Triple norm
-\newcommand{\tnorm}[1]{\left\vert\!\left\vert\!\left\vert#1\right\vert\!\right\vert\!\right\vert}
-
-% Common double-stroke letters
-\def\C{\mathbb{C}}
-\def\N{\mathbb{N}}
-\def\R{\mathbb{R}}
-\def\S{\mathbb{S}}
-\def\Z{\mathbb{Z}}
-
-\def\D{\mathcal{D}}
-% \def\L{\mathcal{L}}
-
-\def\grad{\nabla}
-\DeclareMathOperator{\dive}{div}
-\DeclareMathOperator{\supp}{supp}
-\DeclareMathOperator{\essup}{ess\,sup}
-\DeclareMathOperator{\Lip}{Lip}
-\DeclareMathOperator{\sgn}{sgn}
-
-% Notation for differentials
-\def\d{\,\mathrm{d}}
-\def\dv{\d v}
-\def \ddt{\frac{\mathrm{d}}{\mathrm{d}t}}
-\def \ddt{\frac{\mathrm{d}}{\mathrm{d}t}}
-\def \ddr{\frac{\mathrm{d}}{\mathrm{d}r}}
-
-\def\p{\partial}
-
-\def\ird{\int_{\R^d}}
-\renewcommand{\L}[1]{L^{#1}(\R^d)}
-
-% Theorems
-%-----------------------------------------------------------------
-\newtheorem{thm}{Theorem}[section]
-% \newtheorem{thm}{Theorem}
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{lem}[thm]{Lemma}
-\newtheorem{prp}[thm]{Proposition}
-% \newtheorem{hyp}[thm]{Hypothesis}
-\newtheorem{hyp}{Hypothesis}
-\newtheorem{prb}{Problem}
-\theoremstyle{definition}
-\newtheorem{dfn}[thm]{Definition}
-\theoremstyle{remark}
-\newtheorem{rem}[thm]{Remark}
-\theoremstyle{example}
-\newtheorem{ex}[thm]{Example}
+\JournalInfo{Journal, Vol. XXI, No. 1, 1-5, 2013} % Journal information
 
 
-% Title, author, date
-%-----------------------------------------------------------------
+\PaperTitle{El papel de las hormonas en la atracción
+sexual olfativa en humanos} % Article title
 
-% If set, these will be the internal title and author of the PDF (and
-% will be listed for example in ereaders and tablets).
+\Authors{Ignacio Riquelme-Medina\textsuperscript{1}*, María Romo-Lozano\textsuperscript{2}} % Authors
+\affiliation{\textsuperscript{1}\textit{Instituto de Parasitología y Biomedicina López-Neyra, CSIC, Granada, España}} % Author affiliation
+\affiliation{\textsuperscript{2}\textit{Departmento de Etología, Universidad de Granada, España}} % Author affiliation
+\affiliation{*\textbf{Corresponding author}: mariarl92@gmail.com} % Corresponding author
 
-% \hypersetup{pdftitle={Title of the PDF}}
-% \hypersetup{pdfauthor={Author of the PDF}}
+\Keywords{MHC --- Olor --- Simetría --- Atractivo Sexual} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
 
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
 
-% Paper title and author
-\title{Article template}
-\author{Author One \and Author Two}
+\Abstract{Diversas líneas de investigación a lo largo de los últimos años han comprobado la función de la percepción del olor en el atractivo sexual en humanos. Diferentes moléculas como las feromonas o las proteínas codificadas por el Complejo Mayor de Histocompatibilidad (MHC) que son secretadas en el sudor parecen ser detectadas por los receptores olfativos humanos. Este estudio se ha realizado con el fin de comprobar algunos aspectos relacionados con la función del olor en el atractivo sexual en humanos, recogidos en 4 hipótesis. En concreto, nuestra población objeto de estudio ha sido la clase de etología de 4o curso de grado en Biología en la Universidad de Granada. Para llevar a cabo este estudio se han utilizado camisetas con el olor de los sujetos de prueba, sometidas a evaluación por parte de los sujetos del sexo opuesto. También se han tomado medidas corporales de todos los participantes para determinar la asimetría de cada uno. Con los datos obtenidos y mediante análisis estadísticos hemos estudiado la relación del olor con la simetría del individuo que lo porta y con la ratio entre los dedos índice y anular en hombres (indicador de exposición a testosterona durante el desarrollo), así como la influencia del ciclo ovárico y la de los anticonceptivos en la percepción del olor en las mujeres. Los resultados apuntan a que en esta población no hay relaciones significativas entre la simetría y las puntuaciones del olor obtenidas, así como entre el día del ciclo de la mujer que puntúa o si toma anticonceptivos o no, y la media de las puntuaciones que da. Tampoco parece haber una correspondencia entre la ratio d2:d4 de los hombres y la puntuación media que reciben y por último.}
 
-% Date is set automatically unless specified.
-% \date{October 2015}
-
-
-% Addresses. The "article" class does not have a standard way to
-% include them. This imitates the behaviour of "amsart" by inserting
-% them at the end of the paper.
-%-----------------------------------------------------------------
-
-\AtEndDocument{\bigskip{\footnotesize
-  \noindent
-  \textsc{Author One. Street, A123 456, Country.}
-  \textit{E-mail address}: \texttt{\href{mailto:email@example.com}{email@example.com}}
-  \par
-  \addvspace{\medskipamount}
-  \noindent
-  \textsc{Author Two. Street, A123 456, Country.}
-  \textit{E-mail address}: \texttt{\href{mailto:email@example.com}{email@example.com}}
-}}
-
-
-% =========================================================================
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\maketitle
+\maketitle % Output the title and abstract box
 
-\begin{abstract}
-  We give a nice template for papers.
-\end{abstract}
+\tableofcontents % Output the contents section
 
-\tableofcontents
+\thispagestyle{empty} % Removes page numbering from the first page
 
-\section{Introduction}
-\label{sec:intro}
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+
+A lo largo de las últimas décadas, numerosos grupos de investigación han centrado su atención en el papel del olor en la atracción sexual en humanos. Se ha comprobado que cumple una importante función en la selección de pareja al ser un indicador honesto de la calidad genética del individuo que lo porta (revisado en Kohl et al. 2001). Las feromonas son parte de las moléculas que intervienen en el proceso, como se ha comprobado en casi todos los animales sociales, así como en humanos (revisado en Bhutta, 2007). El mecanismo por el cual se produce este reconocimiento se desconoce pero es sabido que existen receptores específicos para feromonas que se sitúan en el órgano de Jacobson en ciertos animales (Bhutta, 2007). En humanos se ha sugerido que estos receptores, junto con los olfativos, se localizan en la mucosa olfatoria (Bhutta, 2007).
+
+Es sabido que las mujeres son el sexo con más capacidad discriminatoria de olores de diferentes individuos (Sandro et al. 2005). Una de las hormonas masculinas cuyo efecto de atracción se ha estudiado en mujeres es la testosterona. Es una de las hormonas masculinizantes, por lo que elevados niveles de testosterona se corresponden con caracteres sexuales secundarios masculinos más patentes. La masculinidad ha sido relacionada por diferentes estudios con la calidad del individuo (Folstad and Karter, 1992), ya que niveles altos de testosterona limitan la acción del sistema inmune (Kanda et al. 1996) por lo que sólo los individuos de mejor calidad podrían “permitirse” ser masculinos (Thornhill and Gangestad, 1999). Se ha visto que las mujeres, generalmente y en especial durante la fase fértil del ciclo ovárico (fase folicular), prefieren olores correspondientes a hombres masculinos (Cornwell et al. 2007), (Havlicek et al. 2005).
+
+La masculinidad está relacionada por otra parte con la simetría del individuo (Little et al. 2008), ya que la exposición a hormonas durante el desarrollo puede influir en la misma (Thornhill and Gangestad 1993). La simetría de cada individuo está también por otra parte relacionada con la calidad genética del individuo, ya que sólo individuos de alta calidad pueden mantener un desarrollo normal a pesar de las posibles perturbaciones ambientales o del estrés génico que haya podido sufrir. Por tanto la simetría sirve de indicador tanto de alta calidad fenotípica como genotípica (por ejemplo, la capacidad de resistencia frente a enfermedades, revisado en Møller and Thornhill 1998). La estabilidad durante el desarrollo del individuo puede ser hereditaria (Møller and Thornhill 1997), lo que explicaría la preferencia de las mujeres por individuos con bajas tasas de asimetría.
+
+La ratio entre la longitud de los dedos d2 y d4 se ha demostrado que está relacionada con la exposición a testosterona durante el desarrollo prenatal. Esto es, cuanto menor sea el ratio, mayor exposición a testosterona, que posiblemente dirige la futura masculinidad del individuo (Neave et al. 2003), con las consecuencias ya mencionadas en el párrafo anterior. Una de nuestras hipótesis propuestas es que existe una correspondencia entre esta ratio y la puntuación que las mujeres dan a las camisetas impregnadas con el olor de los hombres participantes.
+
+Otro componente esencial del olor humano que es reconocido por otros individuos son las proteínas codificadas por genes del MHC (Complejo Mayor de Histocompatibilidad). El MHC es una gran región cromosómica que contiene una considerable cantidad de genes relacionados con el sistema inmune, pero también contiene genes (o cuenta con genes ligados) de receptores olfatorios (Eklund et al., 2000; Fan et al., 1996; Ziegler et al., 2000). Son genes que cumplen un papel esencial en la función del Sistema Inmune. Es beneficioso para los individuos que sus MHC tengan una cierto porcentaje de variabilidad. Diferentes estudios han comprobado que las mujeres se ven más atraídas por olores de individuos con un MHC diferente del suyo (Wekedin et al. 1995). Aunque en nuestro experimento no hemos realizado análisis de MHC, no ignoramos el efecto que estos genes puedan ejercer en el papel del olor en el atractivo sexual.
+
+Se ha observado que la preferencia de las mujeres por unos olores u otros varía por los cambios en los niveles hormonales que se producen en el ciclo (Pause et al. 1996). Se ha visto cómo los rasgos como la masculinidad y la simetría, asociados con beneficios indirectos (es decir, aquellas que reflejan la buena calidad genética y que pasarán a la descendencia) se prefieren en la fase folicular, cuando las mujeres son más fértiles, (Jones et al. 2005). En este estudio queremos comprobar si durante la fase fértil del ciclo las mujeres son más sensibles a las hormonas masculinas y las aprecian mejor en el olor, dando por lo tanto puntaciones en general más altas que las que se encuentran en fase luteínica. Además, en las mujeres que toman anticonceptivos orales, la progesterona se ve aumentada a niveles similares a los del embarazo y a la fase luteínica, siendo sus preferencias por los olores del sexo opuesto similares siempre a los de la fase no fértil, y siendo sus puntuaciones en general más bajas, independientemente de en qué día del ciclo se encuentren. Este hecho también ha sido recogido en una de nuestras hipótesis para ser comprobado.
+
+%------------------------------------------------
+
+\section{Methods}
+
+\begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
+	\includegraphics[width=\linewidth]{view}
+	\caption{Wide Picture}
+	\label{fig:view}
+\end{figure*}
+
+\subsection{Hipótesis}
+
+\begin{enumerate}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+	\item Concordancia entre nota recibida y simetría corporal en ambos sexos.
+	\item Las mujeres dan en general más puntuación en los días fértiles.
+	\item Las mujeres que toman anticonceptivos dan puntuaciones más bajas.
+	\item Hombres con menor ratio d2/d4, reciben puntuaciones más altas.
+\end{enumerate}
+
+\subsection{Diseño Experimental}
+
+La población objeto de este experimento son los alumnos de Etología de 4o de grado en Biología de la Facultad de Ciencias de Granada. La edad de los sujetos varía entre 21 y 27 años, estando la media en 21,7 años.
+
+Para la realización de este experimento se pidió a los sujetos (25 chicos y 35 chicas) que trajesen camisetas propias para realizar una comprobación y puntuación del olor corporal impregnado en la camiseta por parte de todos los individuos del sexo opuesto.
+
+Las camisetas debían ser de color blanco o negro, sin dibujos, patrones, marcas, etc., por las que puedan ser diferenciadas, para evitar su posible reconocimiento o asociación con los olores.
+
+Para impregnar las camisetas con el olor de cada individuo se hizo que cada uno vistiese su camiseta durante 2 noches antes del estudio, estando las camisetas lavadas desde hace por lo menos una semana antes de vestirlas para evitar la contaminación por olores a productos de limpieza. También se evitó el uso de otros productos, como jabones o geles con olor, o desodorante; durante las noches que se vistiese la camiseta. Los individuos, sin embargo, pudieron tomar duchas sin usar los productos mencionados anteriormente durante esta fase. Mientras no se vistiesen las camisetas debían ser dejadas debajo de la almohada para evitar la posible contaminación de otros olores. Por último, se debía evitar la contaminación de olores ajenos, como el tabaco o el de otra persona diferente al sujeto, mientras se vistiese la camiseta.
+
+Para evitar la contaminación del olor durante el transporte se utilizaron bolsas de plástico con cierre hermético para guardar congelados. Cada individuo podía indicar posibles problemas, como estar en un periodo de medicación o una posible contaminación. Además las mujeres debían indicar su día del ciclo menstrual y si estaba tomando medicamentos anticonceptivos o no. Estos datos son relevantes para el posterior análisis, como veremos.
+
+Durante el análisis del olor y su puntuación se asignó un número aleatorio a cada camiseta, y se distribuyeron en una clase en 2 columnas, una con camisetas de chicas y otra con las de los chicos. En cada columna había varias filas con unas 6 camisetas en cada una. Los sujetos entraban al análisis en grupos de 10, la mitad de cada sexo, y procedían a evaluar las camisetas del sexo contrario evitando la contaminación del olor lo máximo posible y distribuyéndose aleatoriamente en la columna. Cada camiseta se puntuaba de 1 a 5, siendo 1 el olor muy desagradable y el 5 el olor muy agradable.
+
+También se debía indicar si se reconocía contaminación del olor, por ejemplo por productos de limpieza o tabaco.
+Se hizo una ronda con todos los sujetos, y una segunda ronda con un grupo reducido de sujetos para comprobar la repetibilidad.
+
+Para las medidas de simetría se utilizaron calibres y cintas métricas para medir orejas, dedos índice, corazón, anular y meñique de cada mano, anchura de las muñecas, distancias codo-muñeca y distancias cadera-rodilla. Estas 3 últimas medidas fueron descartadas ya que no se consiguió una repetibilidad aceptable. Cada sujeto midió a otros 6-7 sujetos 2 veces a cada uno, se midió tanto la parte izquierda como la derecha de cada una de las medidas. A partir de estas medidas se calcularon los valores de la asimetría de cada estructura.
+
+Después se procedió a la informatización de los datos y a su análisis estadístico.
+
+\subsection{Análisis estadístico}
+
+Se utilizó el programa IBM SPSS Stadistics para realizar el análisis estadístico de los datos obtenidos.
+
+\paragraph{1ª Hipótesis} 
+
+En esta hipótesis queremos comprobar si existe una relación entre la simetría de cada individuo y la nota recibida.
+
+Se utilizaron los datos de la Media de nota recibida y la Asimetría general (haciendo la media de las razones asimetría/centímetros de estructura para las 5 medidas fiables) tanto de hombres como mujeres. Primero se procedió a comprobar si lo datos eran normales y tenían homocedasticidad, obteniendo unos resultados de normalidad con prueba de Shapiro-Wilk (E=0,953 gl=52 Sig=0,040) para Media recibida y (E=0,923 gl=52 Sig=0,003) para Asimetría. Al no ser normales estos datos se pasó a utilizar una prueba de correlación de Spearman.
+
+\paragraph{2ª Hipótesis} 
+
+Para comprobar si las mujeres fértiles dan por lo general puntuaciones más altas se utilizaron los datos de las medias de notas dadas por las mujeres, diferenciando entre fértiles y no fértiles. Establecimos el periodo fértil ente los días 6 y 18 del ciclo menstrual.
+
+Primero se comprobó si los datos eran normales y tenían homocedasticidad, obteniendo unos resultados mediante la prueba de Shapiro-Wilk de (E=0,911 gl=31 Sig=0,14). Se procedió a normalizar los datos transformándolos por medio de una función exponencial. Los datos transformados se volvieron a comprobar, obteniendo unos resultados en la prueba de Shapiro-Wilk de (E=0,991 gl=31 Sig=0,994) y en con el estadístico de Levene (E=0,031Sig=0,862); por lo que cumplían las condiciones de normalidad y homocedasticidad. Después se procedió a realizar una T de Student para muestras independientes.
+
+\paragraph{3ª Hipótesis} 
+
+En esta hipótesis establecíamos que las mujeres que están tomando anticonceptivos orales confieren puntuaciones más bajas que las demás. Se utilizaron los datos de las medias de notas dadas por las mujeres, diferenciando entre las que tomaban anticonceptivos y las que no los tomaban, excluyendo casos de consumo de otros medicamentos. Se utilizaron los datos transformados en la anterior hipótesis y se procedió a utilizar una T de Student para muestras independientes.
+
+\paragraph{4ª Hipótesis} 
+
+Para comprobar si los hombres con menor ratio d2:d4 obtienen mayores puntuaciones se utilizaron los datos de la relación dedo2:dedo4 en hombres y la media de la nota recibida por estos. Primero se procedió a comprobar si los datos eran normales y tenían homocedasticidad, obteniendo unos resultados para normalidad con la prueba de Shapiro- Wilk de (E=0,983 gl=19 Sig=0,974) para relación D2:D4 y de (E=0,912 gl=19 Sig=0,081) para media recibida, y para la homocedasticidad con el estadístico de Levene (E=1,098 Sig=0,385) para relación D2:D4 y (E=1,298 Sig=0,314) para media recibida. Estos resultados indican que sí se cumple la normalidad y homocedasticidad. Después se procedió a realizar una prueba de correlación de Pearson.
+
+\begin{equation}
+	\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
+	\label{eq:refname2}
+\end{equation}
+
+\begin{figure}[ht]\centering
+	\includegraphics[width=\linewidth]{results}
+	\caption{In-text Picture}
+	\label{fig:results}
+\end{figure}
+
+Reference to Figure \ref{fig:results}.
+
+%------------------------------------------------
+
+\section{Results and Discussion}
+
+\subsection{1ª Hipótesis}
+
+Se obtuvo en la prueba de correlación de Spearman unos resultados de (C. de correlación=0,148 N=52
+Sig=0,295). Al obtenerse una significación mayor a 0,05, no se puede rechazar la hipótesis nula que es que no hay una correlación entre la asimetría y la media de las notas recibidas.
+
+\subsection{2ª Hipótesis}
+
+
+\subsection{3ª Hipótesis}
 
 
 
+\subsection{4ª Hipótesis}
 
 
-\bibliography{bibliography}
 
+\begin{table}[hbt]
+	\caption{Table of Grades}
+	\centering
+	\begin{tabular}{llr}
+		\toprule
+		\multicolumn{2}{c}{Name} \\
+		\cmidrule(r){1-2}
+		First name & Last Name & Grade \\
+		\midrule
+		John & Doe & $7.5$ \\
+		Richard & Miles & $2$ \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:label}
+\end{table}
+
+\subsubsection{Subsubsection}
+
+\lipsum[12] % Dummy text
+
+\begin{description}
+	\item[Word] Definition
+	\item[Concept] Explanation
+	\item[Idea] Text
+\end{description}
+
+\subsubsection{Subsubsection}
+
+\lipsum[13] % Dummy text
+
+\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+	\item First item in a list
+	\item Second item in a list
+	\item Third item in a list
+\end{itemize}
+
+\subsubsection{Subsubsection}
+
+\lipsum[14] % Dummy text
+
+\subsection{Subsection}
+
+\lipsum[15-23] % Dummy text
+
+%------------------------------------------------
+
+\phantomsection
+\section*{Acknowledgments} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
+
+So long and thanks for all the fish \cite{Figueredo:2009dg, Smith:2012qr}.
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\phantomsection
+\bibliographystyle{unsrt}
+\bibliography{sample.bib}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}

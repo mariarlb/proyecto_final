@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[spanish]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Journal, Vol. XXI, No. 1, 1-5, 2013} % Journal information
+#\Archive{Additional note} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{El papel de las hormonas en la atracción
+sexual olfativa en humanos} % Article title
+
+\Authors{Ignacio Riquelme-Medina\textsuperscript{1}*, María Romo-Lozano\textsuperscript{2}} % Authors
+\affiliation{\textsuperscript{1}\textit{Instituto de Parasitología y Biomedicina López-Neyra, CSIC, Granada, España}} % Author affiliation
+\affiliation{\textsuperscript{2}\textit{Departmento de Etología, Universidad de Granada, España}} % Author affiliation
+\affiliation{*\textbf{Corresponding author}: mariarl92@gmail.com} % Corresponding author
+
+\Keywords{MHC --- Olor --- Simetría --- Atractivo Sexual} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{Diversas líneas de investigación a lo largo de los últimos años han comprobado la función de la percepción del olor en el atractivo sexual en humanos. Diferentes moléculas como las feromonas o las proteínas codificadas por el Complejo Mayor de Histocompatibilidad (MHC) que son secretadas en el sudor parecen ser detectadas por los receptores olfativos humanos. Este estudio se ha realizado con el fin de comprobar algunos aspectos relacionados con la función del olor en el atractivo sexual en humanos, recogidos en 4 hipótesis. En concreto, nuestra población objeto de estudio ha sido la clase de etología de 4o curso de grado en Biología en la Universidad de Granada. Para llevar a cabo este estudio se han utilizado camisetas con el olor de los sujetos de prueba, sometidas a evaluación por parte de los sujetos del sexo opuesto. También se han tomado medidas corporales de todos los participantes para determinar la asimetría de cada uno. Con los datos obtenidos y mediante análisis estadísticos hemos estudiado la relación del olor con la simetría del individuo que lo porta y con la ratio entre los dedos índice y anular en hombres (indicador de exposición a testosterona durante el desarrollo), así como la influencia del ciclo ovárico y la de los anticonceptivos en la percepción del olor en las mujeres. Los resultados apuntan a que en esta población no hay relaciones significativas entre la simetría y las puntuaciones del olor obtenidas, así como entre el día del ciclo de la mujer que puntúa o si toma anticonceptivos o no, y la media de las puntuaciones que da. Tampoco parece haber una correspondencia entre la ratio d2:d4 de los hombres y la puntuación media que reciben y por último.}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title and abstract box
+
+\tableofcontents % Output the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+
+\lipsum[1-3] % Dummy text
+ and some mathematics $\cos\pi=-1$ and $\alpha$ in the text\footnote{And some mathematics $\cos\pi=-1$ and $\alpha$ in the text.}.
+
+%------------------------------------------------
+
+\section{Methods}
+
+\begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
+	\includegraphics[width=\linewidth]{view}
+	\caption{Wide Picture}
+	\label{fig:view}
+\end{figure*}
+
+\lipsum[4] % Dummy text
+
+\begin{equation}
+	\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
+	\label{eq:refname2}
+\end{equation}
+
+\lipsum[5] % Dummy text
+
+\begin{enumerate}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+	\item First item in a list
+	\item Second item in a list
+	\item Third item in a list
+\end{enumerate}
+
+\subsection{Subsection}
+
+\lipsum[6] % Dummy text
+
+\paragraph{Paragraph} \lipsum[7] % Dummy text
+\paragraph{Paragraph} \lipsum[8] % Dummy text
+
+\subsection{Subsection}
+
+\lipsum[9] % Dummy text
+
+\begin{figure}[ht]\centering
+	\includegraphics[width=\linewidth]{results}
+	\caption{In-text Picture}
+	\label{fig:results}
+\end{figure}
+
+Reference to Figure \ref{fig:results}.
+
+%------------------------------------------------
+
+\section{Results and Discussion}
+
+\lipsum[10] % Dummy text
+
+\subsection{Subsection}
+
+\lipsum[11] % Dummy text
+
+\begin{table}[hbt]
+	\caption{Table of Grades}
+	\centering
+	\begin{tabular}{llr}
+		\toprule
+		\multicolumn{2}{c}{Name} \\
+		\cmidrule(r){1-2}
+		First name & Last Name & Grade \\
+		\midrule
+		John & Doe & $7.5$ \\
+		Richard & Miles & $2$ \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:label}
+\end{table}
+
+\subsubsection{Subsubsection}
+
+\lipsum[12] % Dummy text
+
+\begin{description}
+	\item[Word] Definition
+	\item[Concept] Explanation
+	\item[Idea] Text
+\end{description}
+
+\subsubsection{Subsubsection}
+
+\lipsum[13] % Dummy text
+
+\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+	\item First item in a list
+	\item Second item in a list
+	\item Third item in a list
+\end{itemize}
+
+\subsubsection{Subsubsection}
+
+\lipsum[14] % Dummy text
+
+\subsection{Subsection}
+
+\lipsum[15-23] % Dummy text
+
+%------------------------------------------------
+
+\phantomsection
+\section*{Acknowledgments} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
+
+So long and thanks for all the fish \cite{Figueredo:2009dg, Smith:2012qr}.
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\phantomsection
+\bibliographystyle{unsrt}
+\bibliography{sample.bib}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

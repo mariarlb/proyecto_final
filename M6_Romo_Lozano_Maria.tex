@@ -26,6 +26,10 @@
 
 \usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
 
+\usepackage{hyperref}
+
+\usepackage{apacite} 
+
 %----------------------------------------------------------------------------------------
 %	COLUMNS
 %----------------------------------------------------------------------------------------
@@ -80,8 +84,7 @@ sexual olfativa en humanos} % Article title
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\Abstract{Diversas líneas de investigación a lo largo de los últimos años han comprobado la función de la percepción del olor en el atractivo sexual en humanos. Diferentes moléculas como las feromonas o las proteínas codificadas por el Complejo Mayor de Histocompatibilidad (MHC) que son secretadas en el sudor parecen ser detectadas por los receptores olfativos humanos. Este estudio se ha realizado con el fin de comprobar algunos aspectos relacionados con la función del olor en el atractivo sexual en humanos, recogidos en 4 hipótesis. En concreto, nuestra población objeto de estudio ha sido la clase de etología de 4o curso de grado en Biología en la Universidad de Granada. Para llevar a cabo este estudio se han utilizado camisetas con el olor de los sujetos de prueba, sometidas a evaluación por parte de los sujetos del sexo opuesto. También se han tomado medidas corporales de todos los participantes para determinar la asimetría de cada uno. Con los datos obtenidos y mediante análisis estadísticos hemos estudiado la relación del olor con la simetría del individuo que lo porta y con la ratio entre los dedos índice y anular en hombres (indicador de exposición a testosterona durante el desarrollo), así como la influencia del ciclo ovárico y la de los anticonceptivos en la percepción del olor en las mujeres. Los resultados apuntan a que en esta población no hay relaciones significativas entre la simetría y las puntuaciones del olor obtenidas, así como entre el día del ciclo de la mujer que puntúa o si toma anticonceptivos o no, y la media de las puntuaciones que da. Tampoco parece haber una correspondencia entre la ratio d2:d4 de los hombres y la puntuación media que reciben y por último.}
-
+\Abstract{Encuentra \href{https://github.com/mariarlb/proyecto_final}{AQUÍ} la URL del repositorio de GitHub para gestionar este artículo. Diversas líneas de investigación a lo largo de los últimos años han comprobado la función de la percepción del olor en el atractivo sexual en humanos. Diferentes moléculas como las feromonas o las proteínas codificadas por el Complejo Mayor de Histocompatibilidad (MHC) que son secretadas en el sudor parecen ser detectadas por los receptores olfativos humanos. Este estudio se ha realizado con el fin de comprobar algunos aspectos relacionados con la función del olor en el atractivo sexual en humanos, recogidos en 4 hipótesis. En concreto, nuestra población objeto de estudio ha sido la clase de etología de 4o curso de grado en Biología en la Universidad de Granada. Para llevar a cabo este estudio se han utilizado camisetas con el olor de los sujetos de prueba, sometidas a evaluación por parte de los sujetos del sexo opuesto. También se han tomado medidas corporales de todos los participantes para determinar la asimetría de cada uno. Con los datos obtenidos y mediante análisis estadísticos hemos estudiado la relación del olor con la simetría del individuo que lo porta y con la ratio entre los dedos índice y anular en hombres (indicador de exposición a testosterona durante el desarrollo), así como la influencia del ciclo ovárico y la de los anticonceptivos en la percepción del olor en las mujeres. Los resultados apuntan a que en esta población no hay relaciones significativas entre la simetría y las puntuaciones del olor obtenidas, así como entre el día del ciclo de la mujer que puntúa o si toma anticonceptivos o no, y la media de las puntuaciones que da. Tampoco parece haber una correspondencia entre la ratio d2:d4 de los hombres y la puntuación media que reciben y por último.}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -117,9 +120,9 @@ Se ha observado que la preferencia de las mujeres por unos olores u otros varía
 \section{Methods}
 
 \begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
-	\includegraphics[width=\linewidth]{view}
-	\caption{Wide Picture}
-	\label{fig:view}
+	\includegraphics[width=\linewidth]{TaraJacoby}
+	\caption{Ilustración de la artista Tara Jacoby representando el papel del olor corporal en la atracción sexual.}
+	\label{fig:Tara Jacoby}
 \end{figure*}
 
 \subsection{Hipótesis}
@@ -162,6 +165,10 @@ En esta hipótesis queremos comprobar si existe una relación entre la simetría
 
 Se utilizaron los datos de la Media de nota recibida y la Asimetría general (haciendo la media de las razones asimetría/centímetros de estructura para las 5 medidas fiables) tanto de hombres como mujeres. Primero se procedió a comprobar si lo datos eran normales y tenían homocedasticidad, obteniendo unos resultados de normalidad con prueba de Shapiro-Wilk (E=0,953 gl=52 Sig=0,040) para Media recibida y (E=0,923 gl=52 Sig=0,003) para Asimetría. Al no ser normales estos datos se pasó a utilizar una prueba de correlación de Spearman.
 
+\begin{equation}
+W =\frac{(\sum_{n}^{i=1} a_{i}x_{(i)})^2}{(\sum_{n}^{i=1}(x_{i}-x^{-})^2}
+\end{equation}
+
 \paragraph{2ª Hipótesis} 
 
 Para comprobar si las mujeres fértiles dan por lo general puntuaciones más altas se utilizaron los datos de las medias de notas dadas por las mujeres, diferenciando entre fértiles y no fértiles. Establecimos el periodo fértil ente los días 6 y 18 del ciclo menstrual.
@@ -176,22 +183,11 @@ En esta hipótesis establecíamos que las mujeres que están tomando anticoncept
 
 Para comprobar si los hombres con menor ratio d2:d4 obtienen mayores puntuaciones se utilizaron los datos de la relación dedo2:dedo4 en hombres y la media de la nota recibida por estos. Primero se procedió a comprobar si los datos eran normales y tenían homocedasticidad, obteniendo unos resultados para normalidad con la prueba de Shapiro- Wilk de (E=0,983 gl=19 Sig=0,974) para relación D2:D4 y de (E=0,912 gl=19 Sig=0,081) para media recibida, y para la homocedasticidad con el estadístico de Levene (E=1,098 Sig=0,385) para relación D2:D4 y (E=1,298 Sig=0,314) para media recibida. Estos resultados indican que sí se cumple la normalidad y homocedasticidad. Después se procedió a realizar una prueba de correlación de Pearson.
 
-\begin{equation}
-	\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
-	\label{eq:refname2}
-\end{equation}
-
-\begin{figure}[ht]\centering
-	\includegraphics[width=\linewidth]{results}
-	\caption{In-text Picture}
-	\label{fig:results}
-\end{figure}
-
 Reference to Figure \ref{fig:results}.
 
 %------------------------------------------------
 
-\section{Results and Discussion}
+\section{Resultados}
 
 \subsection{1ª Hipótesis}
 
@@ -200,76 +196,66 @@ Sig=0,295). Al obtenerse una significación mayor a 0,05, no se puede rechazar l
 
 \subsection{2ª Hipótesis}
 
+Se obtuvo en la prueba de T de Student para muestras independientes unos resultados de (t=0,118 gl=29 Sig=0,907) para varianzas iguales y (t=0,135 gl=6,455 Sig=0,887) para varianzas distintas.
+
+Al obtenerse una significación mayor a 0,05 no se puede rechazar la hipótesis nula que es que no hay diferencia entre las notas dadas por mujeres fértiles y las no fértiles.
 
 \subsection{3ª Hipótesis}
 
+Se obtuvo en la prueba de T de Student para muestras independientes unos resultados de (t=-1,097 gl=28 Sig=0,282) para varianzas iguales y (t=-1,272 gl=21,879 Sig=0,217) para varianzas distintas.
 
+Al obtenerse una significación mayor a 0,05 no se puede rechazar la hipótesis nula que es que no hay diferencia entre las notas dadas por mujeres que toman anticonceptivos y las que no los toman.
 
 \subsection{4ª Hipótesis}
 
+Se obtuvo en la prueba de correlación de Pearson unos resultados de (C. de correlación=-0,027 N=19 Sig=0,912). Al obtenerse una significación mayor a 0,05 no se puede rechazar la hipótesis nula es decir, que no existe correlación entre la relación dedo2:dedo4 en hombres y la media de las notas recibidas por estos.
 
+\section{Discusión}
+
+\subsection{1ª Hipótesis}
+
+Como podemos ver en los resultados, nuestra hipótesis número 1 no se cumple. No se da en nuestro estudio una correlación entre la simetría del individuo y la puntuación que recibe. Esto podría traducirse en que la presencia de factores que alteran el desarrollo del individuo, y la calidad genética del mismo no se ven reflejados en el olor. Se podría concluir que el principal componente que provoca atracción en el olor son las moléculas volátiles procedentes del MHC, que no dependen de la calidad genética ni del desarrollo del individuo.
+
+\subsection{2ª Hipótesis}
+
+Esta hipótesis también es rechazada en vista a los resultados. Por lo tanto, la precepción del olor en las mujeres no varía a lo largo del ciclo ovárico. Concluimos que según nuestros cálculos las variaciones hormonales que se producen en la mujer no condicionan su sensibilidad a la detección de feromonas masculinas.
+
+\subsection{3ª Hipótesis}
+
+Los resultados obtenidos en el contraste de esta hipótesis muestran que, en concordancia con la hipótesis anterior, los niveles de hormonas en este caso modificados por los anticonceptivos no afectan a la capacidad de las mujeres de percibir los componentes del olor del sexo contrario.
+
+\subsection{4ª Hipótesis}
+
+Por último estos resultados nos llevan a rechazar la hipótesis 4. Este resultado concuerda con los anteriores y nos lleva a preguntarnos a qué podrían deberse las diferencias en las valoraciones del olor de individuos diferentes. Nos planteamos la posibilidad de que el principal componente del olor humano que es detectado por el sexo contrario sean las proteínas codificadas por los genes del MHC, como proponen diversos autores. Las feromonas que están en relación con la calidad genética no parecen tener importancia en la determinación de la atracción del olor.
+
+Como conclusión podríamos determinar que el nivel de hormonas del individuo no influye en el atractivo sexual en humanos y que la percepción de las mujeres no se ve alterada por las variaciones hormonales de su ciclo ni por la toma de anticonceptivos orales.
+
+Para futuros estudios sería especialmente interesante la realización de un análisis de los genes del MHC de los individuos participantes del mismo.
 
 \begin{table}[hbt]
-	\caption{Table of Grades}
+	\caption{Resumen de Hipótesis}
 	\centering
 	\begin{tabular}{llr}
 		\toprule
-		\multicolumn{2}{c}{Name} \\
-		\cmidrule(r){1-2}
-		First name & Last Name & Grade \\
+		Nº & Estado & Sig \\
 		\midrule
-		John & Doe & $7.5$ \\
-		Richard & Miles & $2$ \\
+		1ª & Rechazada & $0,295$ \\
+		2ª & Rechazada & $0,907$ \\
+		3ª & Rechazada & $0,282$ \\
+		4ª & Rechazada & $0,912$ \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:label}
 \end{table}
 
-\subsubsection{Subsubsection}
+\bibliography{MiBiblio} 
+\bibliographystyle{apacite}
+\cite{*}
 
-\lipsum[12] % Dummy text
-
-\begin{description}
-	\item[Word] Definition
-	\item[Concept] Explanation
-	\item[Idea] Text
-\end{description}
-
-\subsubsection{Subsubsection}
-
-\lipsum[13] % Dummy text
-
-\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-	\item First item in a list
-	\item Second item in a list
-	\item Third item in a list
-\end{itemize}
-
-\subsubsection{Subsubsection}
-
-\lipsum[14] % Dummy text
-
-\subsection{Subsection}
-
-\lipsum[15-23] % Dummy text
-
-%------------------------------------------------
-
-\phantomsection
-\section*{Acknowledgments} % The \section*{} command stops section numbering
+\section*{Acknoledgments}
 
 \addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
 
-So long and thanks for all the fish \cite{Figueredo:2009dg, Smith:2012qr}.
-
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
-
-\phantomsection
-\bibliographystyle{unsrt}
-\bibliography{sample.bib}
-
-%----------------------------------------------------------------------------------------
+Gracias a Mathias Legrand y a Vel del sitio web latextemplates.com por poner estas plantillas a disposición de los estudiantes y contribuir al material libre y a nuestro aprendizaje mediante su utilización.
 
 \end{document}
